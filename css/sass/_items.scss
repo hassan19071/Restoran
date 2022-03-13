@@ -1,0 +1,68 @@
+/* strat items */ 
+.items{
+    margin: 80px 0;
+    .container{
+        >h3{
+            @include title(40px);
+            margin: auto;
+        }
+        >h1{
+            font-size: 38px;
+            font-weight: 800;
+            margin: 15px 0 30px;
+        }
+        .types{
+            >div{
+                margin: 20px;
+                cursor: pointer;
+                border-bottom: 2px solid #fff;
+                padding-bottom: 8px;
+                transition: .1s;
+                &.active{
+                    border-bottom: 2px solid $mainColor;
+                }
+                i{
+                    color: $mainColor;
+                    font-size: 33px;
+                }
+                span{
+                    font-size: 14px;
+                }
+                h5{
+                    font-size: 16px;
+                    font-weight: 800;
+                }
+            }
+        }
+        .pros{
+            margin: 30px 0 0;
+            transform: scale(0);
+            transition:opacity 0.4s;
+            opacity: 0;
+            display: none;
+            &.active{
+                transform: scale(1);
+                opacity: 1;
+                display: flex;
+            }
+            img{
+                width: 80px;
+            }
+            h4{
+                font-size: 20px;
+                font-weight: 800;
+            }
+            h5{
+                font-size: 17px;
+                font-weight: 800;
+                color: $mainColor !important;
+            }
+            p{
+                margin: 8px 0 0;
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+    }
+}
+/* end items */ 

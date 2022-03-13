@@ -1,0 +1,77 @@
+body {
+    color: #666565;
+    line-height: 1.8;
+    overflow-x: hidden;
+    font-size: 15px;
+    font-family: $mainFont;
+}
+
+a{
+    text-decoration: none;
+    user-select: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: $headColor;
+    font-family: $headFont;
+}
+
+.title{
+    font-family: 'Pacifico', cursive;
+}
+
+.scroll-top{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: $mainColor;
+    padding: 10px;
+    color: #fff;
+    transition:0.3s;
+    cursor: pointer;
+    z-index: 11;
+    &.hide{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.head-text-title{
+    position: relative;
+    z-index: 2;
+   @media (min-width:0px) {
+    padding: 125px 0;
+   }
+   h1{
+       text-align: center;
+       color: #fff;
+       font-size: 60px;
+       font-weight: 800;
+       @media (max-width:991px) {
+           font-size: 40px;
+       }
+   }
+   ul{
+       text-align: center;
+       list-style: none;
+       li{
+           display: inline-block;
+           margin: 10px;
+           position: relative;
+           font-size: 18px;
+           color: #fff;
+           text-transform: uppercase;
+           a{
+               color: $mainColor;
+           }
+           &:not(:last-of-type)::after{
+               content: "/";
+               position: absolute;
+               right: -50%;
+               color: #ddd;
+               top: 50%;
+               transform: translateY(-50%) translateX(-100%);
+           }
+       }
+   }
+}

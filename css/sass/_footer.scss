@@ -1,0 +1,129 @@
+/* start footer */ 
+.footer{
+    background-color: $headColor;
+    padding: 30px 0 20px;
+    h3{
+        @include title(0);
+        font-size: 22px;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    ul{
+        li{
+            margin: 8px 0;
+        }
+    }
+    p{
+        color: #fff;
+        a{
+            color: $mainColor;
+        }
+    }
+    i{
+        color: #fff;
+        transition: .4s;
+    }
+    span{
+        color: #fff;
+    }
+    .icons{
+        margin-top: 20px;
+        a{
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: .4s;
+            &:not(:first-of-type){
+                margin-left: 10px;
+            }
+            &:hover{
+                background-color: #fff;
+                i{
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+    form{
+        position: relative;
+        input{
+            padding: 7px 10px;
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+        button{
+            position: absolute;
+            padding: 7px 20px;
+            background-color: $mainColor;
+            color: #fff;
+            border: none;
+            outline: none;
+            right: 0;
+            transform: translateX(0%);
+            text-transform: uppercase;
+        }
+    }
+    .links{
+        ul{
+            li{
+                a{
+                    position: relative;
+                    color: #fff;
+                    margin-left: 20px;
+                    transition: .4s;
+                    &:hover{
+                        color: $mainColor;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        border-left: 7px solid #fff;
+                        border-top: 7px solid transparent;
+                        border-bottom: 7px solid transparent;
+                        border-right: 7px solid transparent;
+                        transform: translateX(-100%) translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+   .foot{
+       margin-top: 30px;
+       border-top: 1px solid rgb(131, 131, 131);
+       padding-top: 20px;
+       .global-links{
+        ul{
+            li{
+                position: relative;
+                &:not(:last-of-type){
+                    margin-right: 20px;
+                }
+                &:not(:last-of-type)::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    height: 20px;
+                    width: 1px;
+                    background-color: rgb(131, 131, 131);
+                    right:-10px;
+                    transform: translateY(-50%);
+                }
+                a{
+                    color: #fff;
+                    transition: .3s;
+                    &:hover{
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+   }
+}
+/* end footer */ 

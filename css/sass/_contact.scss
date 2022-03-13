@@ -1,0 +1,39 @@
+.contact{
+    margin: 80px 0;
+    h3{
+        @include title(40px);
+        margin: auto;
+    }
+    h1{
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+        margin: 10px 0 30px;
+    }
+    h4{
+        @include title(0);
+        margin-bottom: 10px;
+    }
+    i{
+        color: $mainColor;
+    }
+    form{
+        input , textarea{
+            &:focus{
+                box-shadow:none;
+                outline: none;
+                border: 1.5px solid $mainColor;
+            }
+        }
+        button{
+            width: 100%;
+            background-color: $mainColor;
+            border: none;
+            outline: none;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 10px 0;
+        }
+    }
+}

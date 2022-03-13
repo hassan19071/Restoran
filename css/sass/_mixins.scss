@@ -1,0 +1,40 @@
+@mixin button {
+    background-color:rgba($color: $mainColor, $alpha: 0.9);
+    display: inline-block;
+    padding: 8px 35px;
+    border-radius: 2px;
+    transition: .3s;
+    color: #fff !important;
+    text-transform: uppercase;
+    &:hover{
+        color: #fff !important;
+        background-color:rgba($color: $mainColor, $alpha:1);
+    }
+}
+
+@mixin title($val) {
+    color: $mainColor !important;
+    position: relative;
+    width: fit-content;
+    font-size: 20px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background-color: $mainColor;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%) translateX(100%);
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: $val;
+        height: 2px;
+        background-color: $mainColor;
+        left: -8px;
+        top: 50%;
+        transform: translateY(-50%) translateX(-100%);
+    }
+}

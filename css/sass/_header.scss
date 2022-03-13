@@ -1,0 +1,147 @@
+/* start header */ 
+.header {
+    background-image: url("../images/bg-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    .overlay{
+        position: absolute;
+        top: 0;
+        right: 0%;
+        left: 0;
+        bottom: 0;
+        background-color:rgba($color: $headColor, $alpha: 0.9);
+    }
+    nav{
+        top: 0;
+        left: 0;
+        width: 100%;
+        position:absolute;
+        padding: 0px 0;
+        &.scroll{
+            position: fixed !important;
+            background-color: #0F172B;
+        }
+        @media (max-width:991px) {
+            background-color: #0F172B !important;
+        }
+        @media (min-width:991px) {
+            .dropdown-toggle::after {
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                display: inline-block;
+                right: -2px;
+            }
+        }
+        z-index: 100;
+        .navbar-brand{
+            font-size:40px;
+            font-weight: 800;
+            @media (max-width:991px) {
+                    font-size:30px;
+                    font-weight:700;
+            }
+            color: $mainColor;
+            &:hover , &:focus{
+                color: $mainColor;
+            }
+        }
+        .navbar-toggler{
+            width: 50px;
+            padding: 1px 6px;
+            &:focus{
+                border:2px solid#fff !important;
+            }
+            span{
+                width: 100%;
+                display: block;
+                height: 2px;
+                background-color: #fff;
+                margin: 8px 0;
+            }
+        }
+        .collapse {
+            ul{
+                li{
+                    @media (max-width:991px) {
+                        margin: 7px 0 !important;
+                    }
+                    &:not(:last-of-type){
+                        margin-right: 10px;
+                    }
+                    a{
+                        text-transform: uppercase;
+                        color: #fff !important;
+                        transition: .3s;
+                        &:hover , &.active{
+                            color: $mainColor !important;
+                        }
+                    }
+                    .dropdown-menu{
+                        a{
+                            color: #666565 !important;
+                            font-size: 15px;
+                            &:hover{
+                                color: $mainColor !important;
+                            }
+                        }
+                    }
+                    &.button{
+                        a{
+                            @include button();
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .head-text{
+        position: relative;
+        z-index: 2;
+       @media (min-width:0px) {
+        padding: 165px 0;
+       }
+        h1{
+            font-size:60px;
+            font-weight:900;
+            color: #fff;
+            @media (max-width:767px) {
+                font-size:40px;
+                font-weight:800;
+            }
+        }
+        p{
+            margin: 20px 0;
+            color:#fff;
+        }
+        a{
+            @include button();
+        }
+        img{
+            width: 90%;
+            margin: auto !important;
+            display:block;
+            animation: rotate 50s linear infinite;
+            @keyframes rotate {
+                0%,100%{
+                    transform: rotate(0deg);
+                }
+                25%{
+                    transform: rotate(90deg);
+                }
+                50%{
+                    transform: rotate(180deg);
+                }
+                75%{
+                    transform: rotate(270deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}
+/* end header */ 
